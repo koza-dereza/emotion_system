@@ -1,19 +1,13 @@
-# load model audio
-import cv as cv
 import numpy as np
-import moviepy as mp
 import cv2
 
-import streamlit as st
-
 import librosa
-import streamlit.components.v1 as components
+
 import matplotlib.pyplot as plt
 import os
-from keras.models import model_from_json,load_model
+
 from datetime import datetime
-import joblib
-import pickle
+
 
 
 class AudioTransformer():
