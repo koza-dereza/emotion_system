@@ -1,6 +1,6 @@
 from joblib import load
 import pandas as pd
-import alt
+import altair as alt
 from librosa.feature import melspectrogram
 
 import moviepy
