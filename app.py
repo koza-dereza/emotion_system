@@ -68,9 +68,9 @@ def main():
             FRAME_WINDOW.image(frame)
             img_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-                                faces = haar_cascade.detectMultiScale(
-                                    image=img_gray, scaleFactor=1.3, minNeighbors=5)
-                                for (x, y, w, h) in faces:
+            faces = haar_cascade.detectMultiScale(
+            image=img_gray, scaleFactor=1.3, minNeighbors=5)
+            for (x, y, w, h) in faces:
                                     cv2.rectangle(img=frame, pt1=(x, y), pt2=(
                                         x + w, y + h), color=(255, 0, 0), thickness=2)
                                     roi_gray = img_gray[y:y + h, x:x + w]
