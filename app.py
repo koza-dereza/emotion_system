@@ -12,21 +12,6 @@ from audio import *
 from video import *
 from text import *
 
-# load model video
-import torch
-
-
-
-
-
-
-
-
-
-
-
-
-model = torch.load('it_1head_moddrop_2.pth', map_location=torch.device('cpu'))
 
 emotions = {0:'angry', 1:'calm', 2:'disgust', 3:'fear', 4:'happy', 5:'sad', 6:'surprise'}
 
