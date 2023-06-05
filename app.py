@@ -5,7 +5,7 @@ from librosa.feature import melspectrogram
 
 import moviepy
 from moviepy.editor import *
-from transformers import BertTokenizer
+
 
 
 from audio import *
