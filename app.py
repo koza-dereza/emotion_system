@@ -20,8 +20,6 @@ emotions = {0:'angry', 1:'calm', 2:'disgust', 3:'fear', 4:'happy', 5:'sad', 6:'s
 emotion_classes = ['anger', 'disgust', 'fear', 'joy', 'sadness', 'surprise']
 classifier.load_weights("emotion_model1.h5")
 
-# Define the maximum lengths for audio, text, and video inputs
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
 # Define a function to extract audio features
 def extract_audio_features(video_path):
