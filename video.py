@@ -26,6 +26,8 @@ class VideoTransformer(VideoTransformerBase):
             face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         except Exception:
             st.write("Error loading cascade classifiers")
+        FRAME_WINDOW = st.image([])
+        camera = cv2.VideoCapture(0)
         img = frame.to_ndarray(format="bgr24")
         #image gray
         img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
