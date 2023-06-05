@@ -87,8 +87,6 @@ if run:
             # Display the processed frame
             st.image(frame, channels="BGR")
 
-
-         frame_placeholder.empty()
     if choice == "Распознавание эмоций по загруженному видео":
         m = []
         st.markdown("Загрузите видеофаил")
