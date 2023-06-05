@@ -340,8 +340,8 @@ def main():
                     b = emotions[pred_audio.argmax()]
                     c = emotions[pred_video.argmax()]
                     with col1:
-                        st.success(f"Эмоция_общая: {pred_global.argmax()}")
-                        st.success(f"Эмоция_аудио: {pred_audio.argmax()}")
-                        st.success(f"Эмоция_видео: {pred_video.argmax()}")
+                        st.success(f"Эмоция_общая: {emotions[pred_global.argmax()]}")
+                        st.success(f"Эмоция_аудио: {emotions[pred_audio.argmax()]}")
+                        st.success(f"Эмоция_видео: {emotions[pred_video.argmax()]}")
 if __name__ == "__main__":
     main()
