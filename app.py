@@ -84,8 +84,7 @@ if run:
                 label_position = (x, y)
                 cv2.putText(frame, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-            # Display the processed frame
-            st.image(frame, channels="BGR")
+                st.image(frame, channels="BGR")
 
     if choice == "Распознавание эмоций по загруженному видео":
         m = []
