@@ -2,7 +2,7 @@ from joblib import load
 import pandas as pd
 import altair as alt
 from librosa.feature import melspectrogram
-
+import plotly
 import moviepy
 from moviepy.editor import *
 import tempfile
