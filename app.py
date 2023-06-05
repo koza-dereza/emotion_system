@@ -61,7 +61,7 @@ def main():
         st.header("Распознавание эмоций по выражению лица с веб-камеры")
     st.header("Распознавание эмоций по выражению лица с веб-камеры")
     run = st.checkbox('Run')
-if run:
+    if run:
         # Main loop for capturing and processing frames
         for frame in st.camera():
             # Process the frame
