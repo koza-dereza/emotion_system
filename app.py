@@ -1,7 +1,6 @@
 import numpy as np
 import moviepy
 import altair as alt
-import speech_recognition as sr
 import base64
 import tempfile
 from joblib import load
