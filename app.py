@@ -59,6 +59,7 @@ def main():
         st.header("Распознавание эмоций по выражению лица с веб-камеры")
         model_video = load_model('video_r.hdf5')
         st.header("Распознавание эмоций по выражению лица с веб-камеры")
+    st.header("Распознавание эмоций по выражению лица с веб-камеры")
     run = st.checkbox('Run')
 
     # Open webcam capture
@@ -69,7 +70,19 @@ def main():
 
     # Main loop for capturing and processing frames
     while run:
-        _, frame = camera.read()
+        # Check if webcam is accessible
+        if not camera.isOpened():
+            st.error("Unable to access the webcam. Please make sure it's properly connected.")
+            break
+
+        # Read frames from the webcam
+        ret, frame = camera.read()
+
+        # Check if the frame is empty
+        if not ret:
+            st.error("Failed to capture frame from the webcam.")
+            break
+
         img_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         faces = haar_cascade.detectMultiScale(image=img_gray, scaleFactor=1.3, minNeighbors=5)
 
@@ -92,6 +105,9 @@ def main():
         
         # Display the processed frame in the Streamlit app
         frame_placeholder.image(frame, channels="BGR")
+
+    # Release the webcam capture and clean up
+    camera.release()
     if choice == "Распознавание эмоций по загруженному видео":
         m = []
         st.markdown("Загрузите видеофаил")
