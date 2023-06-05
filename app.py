@@ -1,6 +1,5 @@
 import numpy as np
 import moviepy
-import cv2
 import altair as alt
 import speech_recognition as sr
 import base64
