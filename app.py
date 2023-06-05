@@ -63,7 +63,7 @@ def main():
     run = st.checkbox('Run')
 
     # Open webcam capture
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture(1)
 
     # Create Streamlit image placeholder for displaying frames
     frame_placeholder = st.empty()
