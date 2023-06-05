@@ -82,10 +82,10 @@ def main():
                     finalout = emotion_dict[maxindex]
                     output = str(finalout)
 
-              label_position = (x, y)
-              cv2.putText(frame, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+             label_position = (x, y)
+             cv2.putText(frame, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-              st.image(frame, channels="BGR")
+             st.image(frame, channels="BGR")
 
     if choice == "Распознавание эмоций по загруженному видео":
         m = []
