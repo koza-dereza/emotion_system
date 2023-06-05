@@ -1,44 +1,13 @@
-import numpy as np
-import moviepy
-import altair as alt
-import base64
-import tempfile
 from joblib import load
-import pandas as pd
-import streamlit as st
-import streamlit_webrtc
-from keras.utils import img_to_array
-from keras_preprocessing.sequence import pad_sequences
-import string
+
 
 from librosa.feature import melspectrogram
-from nltk.tokenize import sent_tokenize, word_tokenize
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
-import librosa
-import streamlit.components.v1 as components
-import matplotlib.pyplot as plt
-import os
-from keras.models import model_from_json,load_model
-from datetime import datetime
-import joblib
-import plotly
-from nltk import WordNetLemmatizer
+
 import moviepy
 from moviepy.editor import *
-from nltk.corpus import stopwords
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
-import librosa
-import streamlit.components.v1 as components
-import matplotlib.pyplot as plt
-import os
-from keras.models import model_from_json,load_model
-from datetime import datetime
-import joblib
-import pickle
-
 from transformers import BertTokenizer
 
-from video import VideoTransformer
+
 from audio import *
 from video import *
 from text import *
