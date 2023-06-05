@@ -63,7 +63,7 @@ def main():
     run = st.checkbox('Run')
     if run:
         # Main loop for capturing and processing frames
-        for frame in st.camera():
+        for frame in st.camera_input():
             # Process the frame
              img_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
              faces = haar_cascade.detectMultiScale(image=img_gray, scaleFactor=1.3, minNeighbors=5)
