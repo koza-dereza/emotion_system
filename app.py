@@ -70,11 +70,11 @@ def main():
              faces = haar_cascade.detectMultiScale(image=img_gray, scaleFactor=1.3, minNeighbors=5)
 
              for (x, y, w, h) in faces:
-                cv2.rectangle(img=frame, pt1=(x, y), pt2=(x + w, y + h), color=(255, 0, 0), thickness=2)
-                roi_gray = img_gray[y:y + h, x:x + w]
-                roi_gray = cv2.resize(roi_gray, (48, 48), interpolation=cv2.INTER_AREA)
+             cv2.rectangle(img=frame, pt1=(x, y), pt2=(x + w, y + h), color=(255, 0, 0), thickness=2)
+             roi_gray = img_gray[y:y + h, x:x + w]
+             roi_gray = cv2.resize(roi_gray, (48, 48), interpolation=cv2.INTER_AREA)
 
-                if np.sum([roi_gray]) != 0:
+             if np.sum([roi_gray]) != 0:
                     roi = roi_gray.astype('float') / 255.0
                     roi = np.expand_dims(roi, axis=0)
                     prediction = model.predict(roi)[0]
@@ -82,10 +82,11 @@ def main():
                     finalout = emotion_dict[maxindex]
                     output = str(finalout)
 
-                label_position = (x, y)
-                cv2.putText(frame, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+              label_position = (x, y)
+              cv2.putText(frame, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-                st.image(frame, channels="BGR")
+    # Display the processed frame
+    st.image(frame, channels="BGR")
 
     if choice == "Распознавание эмоций по загруженному видео":
         m = []
