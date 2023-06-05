@@ -61,11 +61,10 @@ def main():
         run = st.checkbox('Run')
         FRAME_WINDOW = st.image([])
         camera = cv2.VideoCapture(0)
-        
+        haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         while run:
             _, frame = camera.read()
-            faces = haar_cascade.detectMultiScale(
-            image=img_gray, scaleFactor=1.3, minNeighbors=5)
+            faces = haar_cascade.detectMultiScale(image=img_gray, scaleFactor=1.3, minNeighbors=5)
             for (x, y, w, h) in faces:
                                     cv2.rectangle(img=frame, pt1=(x, y), pt2=(
                                         x + w, y + h), color=(255, 0, 0), thickness=2)
