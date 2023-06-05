@@ -1,16 +1,8 @@
-import cv as cv
 import numpy as np
-import moviepy as mp
 import cv2
-import altair as alt
-import speech_recognition as sr
-import base64
-import tempfile
-import pandas as pd
 import streamlit as st
-import streamlit_webrtc
 from keras.utils import img_to_array
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
+from streamlit_webrtc import  VideoTransformerBase
 from keras.models import model_from_json,load_model
 from datetime import datetime
 import os
