@@ -63,8 +63,9 @@ def main():
     run = st.checkbox('Run')
     if run:
         # Main loop for capturing and processing frames
-        for frame in st.camera_input("изображение"):
-            # Process the frame
+        video_frames = st.camera_input('Capture', key='camera')
+        if video_frames is not None:
+             frame = np.array(video_frames)
              img_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
              faces = haar_cascade.detectMultiScale(image=img_gray, scaleFactor=1.3, minNeighbors=5)
 
