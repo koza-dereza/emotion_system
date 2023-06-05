@@ -1,8 +1,4 @@
-#text
-
 import joblib
-import pickle
-
 pipe_lr = joblib.load(open("emotion_text.pkl", "rb"))
 
 def predict_emotion(text):
